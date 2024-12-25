@@ -73,7 +73,7 @@ def update_count(request):
             data = Counters.objects.get(id=1)
         except Counters.DoesNotExist:
             data = Counters()
-        data.id = 2
+        data.id = 1
         data.count += 2
         data.save()
         return JsonResponse({'code': 0, "data": data.count},
